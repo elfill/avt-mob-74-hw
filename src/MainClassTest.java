@@ -17,14 +17,14 @@ public class MainClassTest {
     }
 
     @Test
-    public void testGetLocalNumber() {
+    public void testGetClassNumber() {
         {
-            System.out.println("Test testGetLocalNumber launched");
+            System.out.println("Test testGetClassNumber launched");
         }
         MainClass actualNumber = new MainClass();
-        int expectedNumber = 14;
+        int expectedNumber = 45;
 
-        Assert.assertEquals("actualNumber != expectedNumber",expectedNumber,actualNumber.getLocalNumber());
+        Assert.assertTrue("actualNumber =< 45",expectedNumber <= actualNumber.getClassNumber());
     }
 
 }
