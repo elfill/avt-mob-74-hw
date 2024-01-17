@@ -19,12 +19,15 @@ public class MainClassTest {
     @Test
     public void testGetClassNumber() {
         {
-            System.out.println("Test testGetClassNumber launched");
+            System.out.println("Test testGetClassString launched");
         }
-        MainClass actualNumber = new MainClass();
-        int expectedNumber = 45;
-
-        Assert.assertTrue("actualNumber =< 45",expectedNumber <= actualNumber.getClassNumber());
+        MainClass actualString = new MainClass();
+            if (actualString.getClassString().contains("hello")){
+                System.out.println("class_string contains hello");
+            } else if (actualString.getClassString().contains("Hello")) {
+                System.out.println("class_string contains Hello");
+            } else {Assert.fail("class_string not contains Hello or hello");
+        }
     }
 
 }
